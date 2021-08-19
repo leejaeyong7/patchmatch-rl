@@ -1,37 +1,29 @@
-## Welcome to GitHub Pages
+# PatchMatch-RL: Deep MVS with Pixelwise Depth, Normal, and Visibility
+#### Jae Yong Lee, Joseph DeGol, Chuhang Zou, Derek Hoiem
+![Architecture_up](https://user-images.githubusercontent.com/5545126/127352929-498537bd-1139-4241-bd8a-7e3ef5c96ae8.png)
 
-You can use the [editor on GitHub](https://github.com/leejaeyong7/patchmatch-rl/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Abstract
+Recent learning-based multi-view stereo (MVS) methods show excellent performance with dense cameras and small depth ranges. However, non-learning based approaches still outperform for scenes with large depth ranges and sparser wide-baseline views, in part due to their PatchMatch optimization over pixelwise estimates of depth, normals, and visibility. In this paper, we propose an end-to-end trainable PatchMatch-based MVS approach that combines advantages of trainable costs and regularizations with pixelwise estimates. To overcome the challenge of the non-differentiable PatchMatch optimization that involves iterative sampling and hard decisions, we use reinforcement learning to minimize expected photometric cost and maximize likelihood of ground truth depth and normals. We incorporate normal estimation by using dilated patch kernels, and propose a recurrent cost regularization that applies beyond frontal plane-sweep algorithms to our pixelwise depth/normal estimates. We evaluate our method on widely used MVS benchmarks, ETH3D and Tanks and Temples (TnT), and compare to other state of the art learning based MVS models. On ETH3D, our method outperforms other recent learning-based approaches and performs comparably on advanced TnT.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Qualitative Results
 
-### Markdown
+|Reference Image| COLMAP | Ours |
+|---|---|---| 
+|<img src="https://user-images.githubusercontent.com/5545126/127351607-8bb7bb45-7f3f-484a-8dae-df261f48c95d.jpg" width="480">|<img src="https://user-images.githubusercontent.com/5545126/127351579-a34335f7-68fa-42e0-b618-d9e9f9af43e2.png" width="480"> |<img src="https://user-images.githubusercontent.com/5545126/127351573-2eeea200-fd94-4457-b7c1-c9a8201c37d2.png" width="480">|
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+## Resources
+- [Code](https://github.com/leejaeyong7/patch-match-mvs-net)
+- Paper / Supp.Material : Coming Soon
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+## Citation
+If you want to use our work in your project, please cite:
+```bibtex
+@InProceedings{lee2021patchmatchrl,
+    author    = {Lee, Jae Yong and DeGol, Joseph and Zou, Chuhang and Hoiem, Derek},
+    title     = {PatchMatch-RL: Deep MVS with Pixelwise Depth, Normal, and Visibility},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision},
+    month     = {October},
+    year      = {2021}
+}
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/leejaeyong7/patchmatch-rl/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
