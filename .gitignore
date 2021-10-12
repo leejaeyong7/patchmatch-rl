@@ -1,0 +1,14 @@
+# directory level ignores
+.vscode
+logs
+data
+checkpoints
+notebooks
+__pycache__
+# file level ignores
+#.*
+*.pyc
+*~
+*.swp
+/data/
+outputs*
