@@ -13,8 +13,8 @@ Recent learning-based multi-view stereo (MVS) methods show excellent performance
 
 
 ## Resources
-- [Code](https://github.com/leejaeyong7/patch-match-mvs-net)
-- Paper / Supp.Material : Coming Soon
+- [Code](https://github.com/leejaeyong7/patchmatch-rl)
+- Paper / Supp.Material : 
 
 ## Citation
 If you want to use our work in your project, please cite:
